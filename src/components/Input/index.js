@@ -16,3 +16,5 @@ Input.propTypes = {
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     onChange: PropTypes.func
 };
+
+export default Input;

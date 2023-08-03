@@ -1,0 +1,51 @@
+@import "../../styles/colors.scss";
+
+.Typography {
+    &.default {
+        color: $textColor;
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+    &.h1 {
+        color: $primaryColor;
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    &.h2 {
+        color: $primaryColor;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    &.h3 {
+        color: $secondayColor;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    &.h4 {
+        color: $secondayColor;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    &.h5 {
+        color: $textColor;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    &.h6 {
+        color: $textColor;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    &.span {
+        color: $textColor;
+        font-size: 14px;
+        font-weight: normal;
+    }
+}
