@@ -1,0 +1,21 @@
+@import "../../styles/colors.scss";
+
+.Label {
+    display: block;
+    font-size: 16px;
+    color: $textColor;
+    font-weight: bold;
+    margin-bottom: 8px;
+
+    &.primary {
+        color: $primaryColor;
+    }
+
+    &.secondary {
+        color: $secondaryColor;
+    }
+
+    &.small {
+        font-size: 14px;
+    }
+}

@@ -30,7 +30,9 @@ export default function BMICalculator() {
                 Body Mass Index (BMI) Calculator
             </Typography>
             <div>
-                <Label>
+                <Label
+                    className="secondary"
+                >
                     Height (cm):
                 </Label>
                 <Input 
@@ -40,7 +42,9 @@ export default function BMICalculator() {
                 />
             </div>
             <div>
-                <Label>
+                <Label
+                    className="secondary"
+                >
                     Weight (kg):
                 </Label>
                 <Input 
