@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import Label from "../Label";
+import Input from "../../components/Input";
+import Button from "../../components/Button";
 
 export default function BMICalculator() {
     const [height, setHeight] = useState("");
@@ -22,7 +25,12 @@ export default function BMICalculator() {
 
     return(
         <div>
-            
+            <h2>
+                Body Mass Index (BMI) Calculator
+            </h2>
+            <div>
+
+            </div>
         </div>
     );
 }
