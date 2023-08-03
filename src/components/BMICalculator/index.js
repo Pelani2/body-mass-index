@@ -3,6 +3,7 @@ import Label from "../Label";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
 import Typography from "../Typography";
+import "./bmicalculator-styles.scss";
 
 export default function BMICalculator() {
     const [height, setHeight] = useState("");
@@ -25,11 +26,11 @@ export default function BMICalculator() {
     }
 
     return(
-        <div>
+        <div className="BMI__container">
             <Typography variant="h2">
                 Body Mass Index (BMI) Calculator
             </Typography>
-            <div>
+            <div className="BMI__input-box">
                 <Label
                     className="secondary"
                 >
@@ -41,7 +42,7 @@ export default function BMICalculator() {
                     onChange={handleHeightChange}
                 />
             </div>
-            <div>
+            <div className="BMI__input-box">
                 <Label
                     className="secondary"
                 >
@@ -63,7 +64,9 @@ export default function BMICalculator() {
                 <div className="BMI__result">
                     <Typography variant="h3">
                         Your BMI: <Typography variant="span">
-                            <Typography>
+                            <Typography
+                                className="BMI__number"
+                            >
                                 {bmiResult}
                             </Typography>
                         </Typography>
