@@ -51,6 +51,7 @@ export default function BMICalculator() {
             </div>
             <Button 
                 onClick={calculateBMI}
+                variant="primary"
             >
                 Calculate BMI
             </Button>
