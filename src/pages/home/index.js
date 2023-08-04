@@ -1,12 +1,23 @@
-import React from "react";
-import BMICalculator from "../../components/BMICalculator";
+import React, { useState } from "react";
+import BMICalculator, { getBMICategory } from "../../components/BMICalculator";
 import BMIHealthChart from "../../components/BMIHealthChart";
 
 export default function Home() {
+    const [bmiResult, setBMIResult] = useState(null);
+
+    const handleBMICalculated = (calculatedBMI) => {
+        setBMIResult(calculatedBMI);
+    };
+
     return(
         <div>
-            <BMIHealthChart />
-            <BMICalculator />
+            <BMIHealthChart 
+                BMIResult={bmiResult}
+            />
+            <BMICalculator
+                BMIResult={bmiResult}
+                onBMICalculated={handleBMICalculated}
+            />
         </div>
     );  
 }

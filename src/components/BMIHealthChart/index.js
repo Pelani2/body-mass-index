@@ -1,40 +1,24 @@
 import React from "react";
+import { getBMICategory } from "../BMICalculator";
 import Typography from "../../components/Typography";
 import "./bmi-health-chart-styles.scss";
 
-export default function BMIHealthChart() {
+
+export default function BMIHealthChart({ BMIResult }) {
+    const bmiCategory = getBMICategory(BMIResult);
     return(
         <section className="BMIHealthChart">
-            <div className="BMIHealthChart__category underweight">
+            <div 
+                className={`BMIHealthChart__ category ${bmiCategory} ${bmiCategory ? "glow" : ""}`}
+            >
                 <Typography variant="h2">
-                    Underweight
+                    {bmiCategory?.replace("-", " ")}
                 </Typography>
                 <Typography>
-                    Less than 18.5
-                </Typography>
-            </div>
-            <div className="BMIHealthChart__category normal-weight">
-                <Typography variant="h2">
-                    Normal Weight
-                </Typography>
-                <Typography>
-                    18.5 - 24.9
-                </Typography>
-            </div>
-            <div className="BMIHealthChart__category overweight">
-                <Typography variant="h2">
-                    Overweight
-                </Typography>
-                <Typography>
-                    25 - 29.9
-                </Typography>
-            </div>
-            <div className="BMIHealthChart__category obese">
-                <Typography variant="h2">
-                    Obese
-                </Typography>
-                <Typography>
-                    30 or greater
+                    {bmiCategory === "underweight" && "Less than 18.5"}
+                    {bmiCategory === "normal-weight" && "18.5 - 24.9"}
+                    {bmiCategory === "overweight" && "25 - 29.9"}
+                    {bmiCategory === "obese" && "30 or greater"}
                 </Typography>
             </div>
         </section>
