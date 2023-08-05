@@ -26,7 +26,7 @@ const BMICalculator = () => {
     };
 
     const getBMICategory = (bmiResult) => {
-        if (bmiResult === null) return null
+        if (bmiResult === null) return null;
         if (bmiResult < 18.5) {
             return "Underweight";
         } else if (bmiResult >= 18.5 && bmiResult <= 24.9) {
@@ -91,8 +91,8 @@ const BMICalculator = () => {
                             BMI Category: 
                         </Typography>
                         <Typography 
-                            className={`BMI__category-${bmiCategory.toLowerCase()}`}
                             variant="span"
+                            className="BMI__category"
                         >
                             {bmiCategory}
                         </Typography>

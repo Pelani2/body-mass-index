@@ -54,4 +54,14 @@
         font-weight: bold;
         color: #ff3B30;
     }
+
+    &.BMI__category {
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 10px;
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
 }
